@@ -39,7 +39,10 @@
         const hrefLinkAtribute = clickedElement.getAttribute('href');
         console.log('Link href atribute: ' + hrefLinkAtribute);
 
-        /* find the correct article using the selector (value of 'href' attribute) */
+        /* [DONE] find the correct article using the selector (value of 'href' attribute) */
+        
+        const targetArticle = document.querySelector(hrefLinkAtribute);
+        console.log('Targeted article:', targetArticle);
 
         /* add class 'active' to the correct article */
     }
