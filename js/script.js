@@ -44,7 +44,9 @@
         const targetArticle = document.querySelector(hrefLinkAtribute);
         console.log('Targeted article:', targetArticle);
 
-        /* add class 'active' to the correct article */
+        /* [DONE] add class 'active' to the correct article */
+
+        targetArticle.classList.add('active');
     }
 
     const links = document.querySelectorAll('.titles a');
