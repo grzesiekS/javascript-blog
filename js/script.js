@@ -68,13 +68,22 @@
 
         /* for each article */
 
-            /* [IN PROGRESS] get article id*/
+            /* [DONE] get article id*/
 
-            /* find the title element */
+            const articlesList = document.querySelectorAll(optArticleSelector);
+            let articlesID = [];
+
+            for(let article of articlesList) {
+               articlesID.push(article.getAttribute('id'));
+            }
+
+            console.log('Articles ID', articlesID);
+
+            /* [IN PROGRESS] find the title element */
 
             /* get elment title */
 
-            /* using id of the article and title of the elemnt create html code for a link */
+            /* using id of the article and title of the element create html code for a link */
 
             /* add created html code to the title list */
     }
