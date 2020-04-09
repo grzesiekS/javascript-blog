@@ -71,11 +71,10 @@
             console.log('Article id: ' + articleId);
 
             /* [DONE] find the title element */
-
+            /* [DONE] get the title from the title element */
+            
             const articleTitle = article.querySelector(optTitleSelector).innerHTML;
             console.log('Article Title: ' + articleTitle);
-
-            /* get the title from the title element */
 
             /* create HTML of the link */
 
