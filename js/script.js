@@ -54,4 +54,28 @@
     for(let link of links){
         link.addEventListener('click', titleClickHandler);
     }
+
+    const generateTitleLinks = function() {
+        console.log('function generateTitleLinks is working!');
+
+        const optTitleListSelector = '.titles',
+            optTitleSelector = '.post-title',
+            optArticleSelector = '.post';
+
+        /* [IN PROGRESS] remove content of the titles list */
+
+        /* for each article */
+
+            /* get article id*/
+
+            /* find the title element */
+
+            /* get elment title */
+
+            /* using id of the article and title of the elemnt create html code for a link */
+
+            /* add created html code to the title list */
+    }
+
+    generateTitleLinks();
 }
