@@ -105,7 +105,9 @@
             console.log('Title list test: ' + listHtmlCode);
             
 
-            /* [IN PROGRESS] add created html code to the title list */
+            /* [DONE] add created html code to the title list */
+
+            document.querySelector(optTitleListSelector).innerHTML = listHtmlCode;
     }
 
     generateTitleLinks();
