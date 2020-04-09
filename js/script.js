@@ -94,9 +94,18 @@
 
             console.log('Titles', titles);
 
-            /* [IN PROGRESS] using id of the article and title of the element create html code for a link */
+            /* [DONE] using id of the article and title of the element create html code for a link */
 
-            /* add created html code to the title list */
+            let listHtmlCode = '<li><a href=#';
+
+            for(let i = 0; i < articlesID.length; i++) {
+                listHtmlCode += articlesID[i] + '><span>' + titles[i] + '</span>' + '</a></li><li><a href=#'
+            }
+
+            console.log('Title list test: ' + listHtmlCode);
+            
+
+            /* [IN PROGRESS] add created html code to the title list */
     }
 
     generateTitleLinks();
