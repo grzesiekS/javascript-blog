@@ -55,23 +55,36 @@
 
     function generateTitleLinks(){
 
-    /* [DONE] remove contents of titleList */
+        /* [DONE] remove contents of titleList */
 
-    document.querySelector(optTitleListSelector).innerHTML = '';
+        document.querySelector(optTitleListSelector).innerHTML = '';
 
-    /* for each article */
+        /* [DONE] for each article */
 
-        /* get the article id */
+        const articles = document.querySelectorAll(optArticleSelector);
+        console.log('Articles:', articles);
+        
+        for(let article of articles) {
+            /* [DONE] get the article id */
+            
+            const articleId = article.getAttribute('id');
+            console.log('Article id: ' + articleId);
 
-        /* find the title element */
+            /* [DONE] find the title element */
 
-        /* get the title from the title element */
+            const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+            console.log('Article Title: ' + articleTitle);
 
-        /* create HTML of the link */
+            /* get the title from the title element */
 
-        /* insert link into titleList */
+            /* create HTML of the link */
+
+            /* insert link into titleList */
+
+        }
 
     }
+    
 
     generateTitleLinks();
 
