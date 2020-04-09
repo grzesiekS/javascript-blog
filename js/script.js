@@ -62,11 +62,13 @@
             optTitleSelector = '.post-title',
             optArticleSelector = '.post';
 
-        /* [IN PROGRESS] remove content of the titles list */
+        /* [DONE] remove content of the titles list */
+
+        document.querySelector(optTitleListSelector).innerHTML = '';
 
         /* for each article */
 
-            /* get article id*/
+            /* [IN PROGRESS] get article id*/
 
             /* find the title element */
 
