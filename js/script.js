@@ -57,14 +57,18 @@
 
         /* [DONE] remove contents of titleList */
 
-        document.querySelector(optTitleListSelector).innerHTML = '';
+        const titleList = document.querySelector(optTitleListSelector);
+        titleList.innerHTML = '';
 
         /* [DONE] for each article */
 
         const articles = document.querySelectorAll(optArticleSelector);
         console.log('Articles:', articles);
         
+        let html = '';
+
         for(let article of articles) {
+            
             /* [DONE] get the article id */
             
             const articleId = article.getAttribute('id');
@@ -81,9 +85,15 @@
             const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
             console.log('Link HTML: ' + linkHTML);
 
-            /* [IN PROGRESS] insert link into titleList */
+            /* [DONE] insert link into titleList */
+
+            html += linkHTML;
+
+            console.log('HTML code: ' + html);
 
         }
+
+        titleList.insertAdjacentHTML('afterbegin', html);
 
     }
     
