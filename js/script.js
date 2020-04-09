@@ -84,9 +84,17 @@
             const titleElemnts = document.querySelectorAll(optTitleSelector);
             console.log('Titles', titleElemnts);
 
-            /* get the title from the title element */
+            /* [DONE] get the title from the title element */
 
-            /* using id of the article and title of the element create html code for a link */
+            let titles = [];
+
+            for(let title of titleElemnts) {
+                titles.push(title.innerHTML);
+            }
+
+            console.log('Titles', titles);
+
+            /* [IN PROGRESS] using id of the article and title of the element create html code for a link */
 
             /* add created html code to the title list */
     }
