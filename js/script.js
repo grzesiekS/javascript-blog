@@ -79,9 +79,12 @@
 
             console.log('Articles ID', articlesID);
 
-            /* [IN PROGRESS] find the title element */
+            /* [DONE] find the title element */
+            
+            const titleElemnts = document.querySelectorAll(optTitleSelector);
+            console.log('Titles', titleElemnts);
 
-            /* get elment title */
+            /* get the title from the title element */
 
             /* using id of the article and title of the element create html code for a link */
 
