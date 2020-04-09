@@ -49,12 +49,6 @@
         targetArticle.classList.add('active');
     }
 
-    const links = document.querySelectorAll('.titles a');
-
-    for(let link of links){
-        link.addEventListener('click', titleClickHandler);
-    }
-
     const generateTitleLinks = function() {
         console.log('function generateTitleLinks is working!');
 
@@ -96,7 +90,7 @@
 
             /* [DONE] using id of the article and title of the element create html code for a link */
 
-            let listHtmlCode = '<li><a href=#';
+            let listHtmlCode = '<li><a class="active" href=#';
 
             for(let i = 0; i < articlesID.length; i++) {
                 listHtmlCode += articlesID[i] + '><span>' + titles[i] + '</span>' + '</a></li><li><a href=#'
@@ -111,4 +105,11 @@
     }
 
     generateTitleLinks();
+
+    const links = document.querySelectorAll('.titles a');
+
+    for(let link of links){
+        link.addEventListener('click', titleClickHandler);
+    }
+    console.log('Links:', links);
 }
