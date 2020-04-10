@@ -4,6 +4,7 @@
 
 $color-light: #fff;
 $color-dark: #444;
+$color-main: #e74c3c;
 
 $font-logo: 'Sacramento', cursive;
 $font-header: 'Oswald', sans-serif;
@@ -57,11 +58,21 @@ body {
 }
 
 .sidebar, .posts {
-  background: $color-light;
+  background: $color-dark;
+  color: $color-light;
   margin-right: 10px;
   padding: 40px;
   border: 1px solid $color-dark;
   border-radius: 5px;
+
+  a {
+    color: $color-light;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-main;
+    }
+  }
 }
 
 /* Logo */
@@ -82,6 +93,7 @@ body {
   padding: 0;
   .active {
     font-weight: bold;
+    color: $color-main;
   }
 }
 
