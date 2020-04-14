@@ -15,7 +15,7 @@
     /* [DONE] remove class 'active' from all article links  */
 
     const activeLinks = document.querySelectorAll('.titles a.active');
-        
+
     for(let activeLink of activeLinks) {
       activeLink.classList.remove('active');
     }
@@ -40,7 +40,7 @@
     console.log('Link href atribute: ' + hrefLinkAtribute);
 
     /* [DONE] find the correct article using the selector (value of 'href' attribute) */
-        
+
     const targetArticle = document.querySelector(hrefLinkAtribute);
     console.log('Targeted article:', targetArticle);
 
@@ -64,13 +64,13 @@
 
     const articles = document.querySelectorAll(optArticleSelector);
     console.log('Articles:', articles);
-        
+
     let html = '';
 
     for(let article of articles) {
-            
+
       /* [DONE] get the article id */
-            
+
       const articleId = article.getAttribute('id');
       console.log('Article id: ' + articleId);
 
@@ -96,7 +96,7 @@
     titleList.insertAdjacentHTML('afterbegin', html);
 
   }
-    
+
 
   generateTitleLinks();
 
