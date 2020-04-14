@@ -35,6 +35,7 @@ body {
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
+
   span {
     text-transform: none;
     font-weight: 400;
@@ -92,6 +93,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
   .active {
     font-weight: bold;
     color: $color-main;
@@ -133,6 +135,7 @@ body {
 
 .post-tags {
   display: flex;
+
   p {
     margin: 0 10px 0 0;
   }
@@ -154,15 +157,16 @@ body {
   }
 
   .list {
-      text-align: center;
-      li {
-        display: inline-block;
-        margin-right: 10px;
+    text-align: center;
 
-        &:last-child {
-          margin-right: 0;
-        }
+    li {
+      display: inline-block;
+      margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
       }
+    }
   }
 
 }
