@@ -237,7 +237,9 @@
     const titleLink = document.querySelector('a[href="#' + activeArticleID + '"]');
     console.log('Title link for active article:', titleLink);
 
-    /* add class active for title link for current article */
+    /* [DONE] add class active for title link for current article */
+
+    titleLink.classList.add('active');
 
     /* [DONE] execute function addClickListenersToTitles */
 
