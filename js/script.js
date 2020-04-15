@@ -203,9 +203,13 @@
     console.log('Tag links equal href', tagLinksHref);
 
     /* START LOOP: for each found tag link */
+    for(let tagLink of tagLinksHref) {
 
-      /* add class active */
+      /* [DONE] add class active */
 
+      tagLink.classList.add('active');
+
+    }
     /* END LOOP: for each found tag link */
 
     /* execute function "generateTitleLinks" with article selector as argument */
