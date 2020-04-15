@@ -222,6 +222,15 @@
 
     generateTitleLinks('[data-tags~="' + tag + '"]');
 
+    /* [DONE] get active article */
+
+    const activeArticle = document.querySelector(optArticleSelector + '.active');
+    console.log('Get active article:', activeArticle);
+
+    /* get current article id */
+
+    /* add class active for title link for current article */
+
     /* [DONE] execute function addClickListenersToTitles */
 
     addClickListenersToTitles();
