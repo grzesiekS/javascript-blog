@@ -140,7 +140,7 @@
 
         /* [DONE] generate HTML of the link */
 
-        const htmlCode = '<li><a href="#">' + tag + '</a></li>';
+        const htmlCode = '<li><a href="#"><p>' + tag + '</p></a></li>';
         console.log('HTML Code for list: ' + htmlCode);
 
         /* [DONE] add generated code to html variable */
@@ -153,7 +153,10 @@
 
       /* END LOOP: for each tag */
 
-      /* insert HTML of all the links into the tags wrapper */
+      /* [DONE] insert HTML of all the links into the tags wrapper */
+
+      tagsWrapper.insertAdjacentHTML('afterbegin', html);
+
     }
     /* END LOOP: for every article: */
   }
