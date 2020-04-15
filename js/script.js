@@ -232,6 +232,11 @@
     const activeArticleID = activeArticle.getAttribute('id');
     console.log('Active article ID: ' + activeArticleID);
 
+    /* [DONE] get title link where href equals active article id */
+
+    const titleLink = document.querySelector('a[href="#' + activeArticleID + '"]');
+    console.log('Title link for active article:', titleLink);
+
     /* add class active for title link for current article */
 
     /* [DONE] execute function addClickListenersToTitles */
