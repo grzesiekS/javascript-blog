@@ -130,7 +130,10 @@
       const dataTags = article.getAttribute('data-tags');
       console.log('Data tags: ' + dataTags);
 
-      /* split tags into array */
+      /* [DONE] split tags into array */
+
+      const dataTagsArray = dataTags.split(' ');
+      console.log('Data tags Array:', dataTagsArray);
 
       /* START LOOP: for each tag */
 
