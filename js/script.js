@@ -140,7 +140,7 @@
 
         /* [DONE] generate HTML of the link */
 
-        const htmlCode = '<li><a href="#"><p>' + tag + '</p></a></li>';
+        const htmlCode = '<li><a href="#tag-' + tag + '"><p>' + tag + '</p></a></li>';
         console.log('HTML Code for list: ' + htmlCode);
 
         /* [DONE] add generated code to html variable */
