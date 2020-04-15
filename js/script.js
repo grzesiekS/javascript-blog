@@ -116,14 +116,19 @@
     /* [DONE] START LOOP: for every article: */
     for(let article of articlesList){
 
-      /* [IN PROGRESS] find tags wrapper */
+      /* [DONE] find tags wrapper */
 
       const tagsWrapper = article.querySelector(optArticleTagsSelector);
       console.log('Tags Wrapper:', tagsWrapper);
 
-      /* make html variable with empty string */
+      /* [DONE] make html variable with empty string */
 
-      /* get tags from data-tags attribute */
+      let html = '';
+
+      /* [DONE] get tags from data-tags attribute */
+
+      const dataTags = article.getAttribute('data-tags');
+      console.log('Data tags: ' + dataTags);
 
       /* split tags into array */
 
