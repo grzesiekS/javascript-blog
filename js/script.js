@@ -204,8 +204,10 @@
 
     /* START LOOP: for each link */
     for(let link of allTagsLinks) {
-      /* [IN PROGRESS] add tagClickHandler as event listener for that link */
+      /* [DONE] add tagClickHandler as event listener for that link */
+
       link.addEventListener('click', tagClickHandler);
+
     }
     /* END LOOP: for each link */
   }
