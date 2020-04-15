@@ -136,11 +136,15 @@
       console.log('Data tags Array:', dataTagsArray);
 
       /* START LOOP: for each tag */
+      for(let tag of dataTagsArray) {
 
-        /* generate HTML of the link */
+        /* [DONE] generate HTML of the link */
+
+        const htmlCode = '<li><a href="#">' + tag + '</a></li>';
+        console.log('HTML Code for list: ' + htmlCode);
 
         /* add generated code to html variable */
-
+      }
       /* END LOOP: for each tag */
 
       /* insert HTML of all the links into the tags wrapper */
