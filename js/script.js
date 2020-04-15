@@ -197,7 +197,10 @@
     }
     /* END LOOP: for each active tag link */
 
-    /* [IN PROGRESS] find all tag links with "href" attribute equal to the "href" constant */
+    /* [DONE] find all tag links with "href" attribute equal to the "href" constant */
+
+    const tagLinksHref = document.querySelectorAll('a[href="' + href + '"]');
+    console.log('Tag links equal href', tagLinksHref);
 
     /* START LOOP: for each found tag link */
 
