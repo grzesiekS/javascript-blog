@@ -143,8 +143,14 @@
         const htmlCode = '<li><a href="#">' + tag + '</a></li>';
         console.log('HTML Code for list: ' + htmlCode);
 
-        /* add generated code to html variable */
+        /* [DONE] add generated code to html variable */
+
+        html += htmlCode;
+
       }
+
+      console.log('HTML to insert: ' + html);
+
       /* END LOOP: for each tag */
 
       /* insert HTML of all the links into the tags wrapper */
