@@ -197,7 +197,10 @@
   }
 
   function addClickListenersToTags(){
-    /* [IN PROGRESS] find all links to tags */
+    /* [DONE] find all links to tags */
+
+    const allTagsLinks = document.querySelectorAll(optArticleTagsSelector + ' a');
+    console.log('All links to tags:', allTagsLinks);
 
     /* START LOOP: for each link */
 
