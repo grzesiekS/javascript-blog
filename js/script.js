@@ -227,7 +227,10 @@
     const activeArticle = document.querySelector(optArticleSelector + '.active');
     console.log('Get active article:', activeArticle);
 
-    /* get current article id */
+    /* [DONE] get current article id */
+
+    const activeArticleID = activeArticle.getAttribute('id');
+    console.log('Active article ID: ' + activeArticleID);
 
     /* add class active for title link for current article */
 
