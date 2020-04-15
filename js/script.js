@@ -113,9 +113,13 @@
     const articlesList = document.querySelectorAll('article');
     console.log('All articles:', articlesList);
 
-    /* [IN PROGRESS] START LOOP: for every article: */
+    /* [DONE] START LOOP: for every article: */
+    for(let article of articlesList){
 
-      /* find tags wrapper */
+      /* [IN PROGRESS] find tags wrapper */
+
+      const tagsWrapper = article.querySelector(optArticleTagsSelector);
+      console.log('Tags Wrapper:', tagsWrapper);
 
       /* make html variable with empty string */
 
@@ -132,7 +136,7 @@
       /* END LOOP: for each tag */
 
       /* insert HTML of all the links into the tags wrapper */
-
+    }
     /* END LOOP: for every article: */
   }
 
