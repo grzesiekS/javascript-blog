@@ -212,7 +212,10 @@
     }
     /* END LOOP: for each found tag link */
 
-    /* [IN PROGRESS] execute function "generateTitleLinks" with article selector as argument */
+    /* [DONE] execute function "generateTitleLinks" with article selector as argument */
+
+    generateTitleLinks('[data-tags~="' + tag + '"]');
+
   };
 
   function addClickListenersToTags(){
