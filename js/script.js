@@ -108,9 +108,12 @@
   }
 
   function generateTags(){
-    /* find all articles */
+    /* [DONE] find all articles */
 
-    /* START LOOP: for every article: */
+    const articlesList = document.querySelectorAll('article');
+    console.log('All articles:', articlesList);
+
+    /* [IN PROGRESS] START LOOP: for every article: */
 
       /* find tags wrapper */
 
