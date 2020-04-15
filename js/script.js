@@ -54,7 +54,7 @@
     optTitleListSelector = '.titles',
     optArticleTagsSelector = '.post-tags .list';
 
-  function generateTitleLinks(){
+  function generateTitleLinks(customSelector = ''){
 
     /* [DONE] remove contents of titleList */
 
@@ -63,7 +63,7 @@
 
     /* [DONE] for each article */
 
-    const articles = document.querySelectorAll(optArticleSelector);
+    const articles = document.querySelectorAll(optArticleSelector + customSelector);
     console.log('Articles:', articles);
 
     let html = '';
@@ -212,7 +212,7 @@
     }
     /* END LOOP: for each found tag link */
 
-    /* execute function "generateTitleLinks" with article selector as argument */
+    /* [IN PROGRESS] execute function "generateTitleLinks" with article selector as argument */
   };
 
   function addClickListenersToTags(){
