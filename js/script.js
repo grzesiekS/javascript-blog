@@ -183,7 +183,9 @@
     const tag = href.replace('#tag-','');
     console.log('Tag from href: ' + tag);
 
-    /* find all tag links with class active */
+    /* [DONE] find all tag links with class active */
+
+    const activeTagLinks = document.querySelectorAll('a.active[href^="#tag-"]');
 
     /* START LOOP: for each active tag link */
 
