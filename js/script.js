@@ -163,7 +163,7 @@
 
   generateTags();
 
-  function tagClickHandler(event){
+  const tagClickHandler = function(event){
     /* [DONE] prevent default action for this event */
 
     event.preventDefault();
@@ -194,7 +194,7 @@
     /* END LOOP: for each found tag link */
 
     /* execute function "generateTitleLinks" with article selector as argument */
-  }
+  };
 
   function addClickListenersToTags(){
     /* [DONE] find all links to tags */
@@ -203,9 +203,10 @@
     console.log('All links to tags:', allTagsLinks);
 
     /* START LOOP: for each link */
-
-      /* add tagClickHandler as event listener for that link */
-
+    for(let link of allTagsLinks) {
+      /* [IN PROGRESS] add tagClickHandler as event listener for that link */
+      link.addEventListener('click', tagClickHandler);
+    }
     /* END LOOP: for each link */
   }
 
