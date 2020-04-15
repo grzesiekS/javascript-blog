@@ -222,6 +222,16 @@
 
     generateTitleLinks('[data-tags~="' + tag + '"]');
 
+    /* [DONE] execute function addClickListenersToTitles */
+
+    addClickListenersToTitles();
+
+    /* [DONE] execute function addActiveClassCurrentArticleLink */
+
+    addActiveClassCurrentArticleLink();
+  };
+
+  function addActiveClassCurrentArticleLink() {
     /* [DONE] get active article */
 
     const activeArticle = document.querySelector(optArticleSelector + '.active');
@@ -240,12 +250,7 @@
     /* [DONE] add class active for title link for current article */
 
     titleLink.classList.add('active');
-
-    /* [DONE] execute function addClickListenersToTitles */
-
-    addClickListenersToTitles();
-
-  };
+  }
 
   function addClickListenersToTags(){
     /* [DONE] find all links to tags */
