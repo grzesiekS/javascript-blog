@@ -298,7 +298,7 @@
       const html = '<a href="#' + author.replace(' ', '-') + '">by ' + author + '</a>';
       console.log('HTML code for author link: ' + html);
 
-      /* [DONE] add created html code in post-author wrapper */
+      /* [DONE] add created html code into post-author wrapper */
 
       postAuthorWrapper.insertAdjacentHTML('afterbegin', html);
 
@@ -308,5 +308,44 @@
   };
 
   generateAuthors();
+
+  const addClickListenersToAuthors = function() {
+    /* prevent default action for this event */
+
+    /* make new constant named "clickedElement" and give it the value of "this" */
+
+    /* make a new constant "href" and read the attribute "href" of the clicked element */
+
+    /* make a new constatn "author" and get author name from href (replace "_" to " ") */
+
+    /* find all author links with class active */
+
+    /* START LOOP: for each link with class active */
+
+      /* remove class active  from each link*/
+
+    /* END LOOP: for each link with class active */
+
+    /* find all links equals "href" constant */
+
+    /* START LOOP: for each link equals "href" */
+
+      /* add class active */
+
+    /* END LOOP: for each link equals "href" */
+
+    /* execute function "generateTitleLinks" with article selector as argument */
+
+  };
+
+  const authorClickHandler = function() {
+    /* find all links to authors */
+
+    /* START LOOP: for each link */
+
+      /* add tagClickHandler as event listener for that link */
+
+    /* END LOOP: for each link */
+  };
 
 }
