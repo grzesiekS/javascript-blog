@@ -318,7 +318,10 @@
 
     const clickedElement = this;
 
-    /* make a new constant "href" and read the attribute "href" of the clicked element */
+    /* [DONE] make a new constant "href" and read the attribute "href" of the clicked element */
+
+    const href = clickedElement.getAttribute('href');
+    console.log('author link href: ' + href);
 
     /* make a new constatn "author" and get author name from href (replace "_" to " " and replace "#author") */
 
