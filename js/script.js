@@ -288,7 +288,10 @@
       const author = article.getAttribute('data-author');
       console.log('Author of the article: ' + author);
 
-      /* find post-author wrapper of the article */
+      /* [DONE] find post-author wrapper of the article */
+
+      const postAuthorWrapper = article.querySelector(optArticleAuthorSelector);
+      console.log('Post author wrapper: ', postAuthorWrapper);
 
       /* create const html for link with author name */
 
