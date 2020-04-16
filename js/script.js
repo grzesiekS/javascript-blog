@@ -335,7 +335,9 @@
     /* START LOOP: for each link with class active */
     for(let activeLink of authorActiveLink) {
 
-      /* remove class active  from each link*/
+      /* [DONE] remove class active  from each link*/
+
+      activeLink.classList.remove('active');
 
     }
     /* END LOOP: for each link with class active */
