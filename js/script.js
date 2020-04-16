@@ -310,7 +310,7 @@
   generateAuthors();
 
   const addClickListenersToAuthors = function() {
-    /* prevent default action for this event */
+    /* [IN PROGRESS] prevent default action for this event */
 
     /* make new constant named "clickedElement" and give it the value of "this" */
 
@@ -339,13 +339,21 @@
   };
 
   const authorClickHandler = function() {
-    /* find all links to authors */
+    /* [DONE] find all links to authors */
+
+    const authorLinks = document.querySelectorAll(optArticleAuthorSelector + ' a');
+    console.log('Author link:', authorLinks);
 
     /* START LOOP: for each link */
+    for(let link of authorLinks) {
 
-      /* add tagClickHandler as event listener for that link */
+      /* [DONE] add tagClickHandler as event listener for that link */
+      link.addEventListener('click', addClickListenersToAuthors);
 
+    }
     /* END LOOP: for each link */
   };
+
+  authorClickHandler();
 
 }
