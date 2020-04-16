@@ -323,7 +323,10 @@
     const href = clickedElement.getAttribute('href');
     console.log('author link href: ' + href);
 
-    /* make a new constatn "author" and get author name from href (replace "_" to " " and replace "#author") */
+    /* [DONE] make a new constatn "author" and get author name from href (replace "-" to " " and replace "#author") */
+
+    const author = href.replace('#author', '').replace('-', ' ');
+    console.log('author: ' + author);
 
     /* find all author links with class active */
 
