@@ -280,15 +280,20 @@
     console.log('Articles List: ', articlesList);
 
     /* START LOOP: for each articles */
+    for(let article of articlesList) {
+      console.log('article: ', article);
 
-      /* get author from the article */
+      /* [DONE] get author from the article */
+
+      const author = article.getAttribute('data-author');
+      console.log('Author of the article: ' + author);
 
       /* find post-author wrapper of the article */
 
       /* create const html for link with author name */
 
       /* add created html code in post-author wrapper */
-
+    }
     /* END LOOP: for each articles */
 
   };
