@@ -342,7 +342,10 @@
     }
     /* END LOOP: for each link with class active */
 
-    /* find all links equals "href" constant */
+    /* [DONE] find all links equals "href" constant */
+
+    const authorLinkHref = document.querySelectorAll('a[href="' + href + '"]');
+    console.log('All author links that are equale:', authorLinkHref);
 
     /* START LOOP: for each link equals "href" */
 
