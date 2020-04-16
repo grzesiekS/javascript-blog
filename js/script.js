@@ -357,7 +357,9 @@
     }
     /* END LOOP: for each link equals "href" */
 
-    /* execute function "generateTitleLinks" with article selector as argument */
+    /* [DONE] execute function "generateTitleLinks" with article selector as argument */
+
+    generateTitleLinks('[data-author="' + author + '"]');
 
   };
 
