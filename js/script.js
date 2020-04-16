@@ -274,7 +274,10 @@
 
   const generateAuthors = function() {
 
-    /* [IN PROGRESS] Find all articles */
+    /* [DONE] Find all articles */
+
+    const articlesList = document.querySelectorAll('article');
+    console.log('Articles List: ', articlesList);
 
     /* START LOOP: for each articles */
 
