@@ -293,7 +293,10 @@
       const postAuthorWrapper = article.querySelector(optArticleAuthorSelector);
       console.log('Post author wrapper: ', postAuthorWrapper);
 
-      /* create const html for link with author name */
+      /* [DONE] create const html for link with author name */
+
+      const html = '<a href="#' + author.replace(' ', '-') + '">by ' + author + '</a>';
+      console.log('HTML code for author link: ' + html);
 
       /* add created html code in post-author wrapper */
     }
