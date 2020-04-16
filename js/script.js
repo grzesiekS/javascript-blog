@@ -295,7 +295,7 @@
 
       /* [DONE] create const html for link with author name */
 
-      const html = '<a href="#' + author.replace(' ', '-') + '">by ' + author + '</a>';
+      const html = '<a href="#author' + author.replace(' ', '-') + '">by ' + author + '</a>';
       console.log('HTML code for author link: ' + html);
 
       /* [DONE] add created html code into post-author wrapper */
@@ -316,7 +316,7 @@
 
     /* make a new constant "href" and read the attribute "href" of the clicked element */
 
-    /* make a new constatn "author" and get author name from href (replace "_" to " ") */
+    /* make a new constatn "author" and get author name from href (replace "_" to " " and replace "#author") */
 
     /* find all author links with class active */
 
