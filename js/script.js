@@ -328,12 +328,16 @@
     const author = href.replace('#author', '').replace('-', ' ');
     console.log('author: ' + author);
 
-    /* find all author links with class active */
+    /* [DONE] find all author links with class active */
+
+    const authorActiveLink = document.querySelectorAll('a.active[href^="#author"]');
 
     /* START LOOP: for each link with class active */
+    for(let activeLink of authorActiveLink) {
 
       /* remove class active  from each link*/
 
+    }
     /* END LOOP: for each link with class active */
 
     /* find all links equals "href" constant */
