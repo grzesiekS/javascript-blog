@@ -298,7 +298,10 @@
       const html = '<a href="#' + author.replace(' ', '-') + '">by ' + author + '</a>';
       console.log('HTML code for author link: ' + html);
 
-      /* add created html code in post-author wrapper */
+      /* [DONE] add created html code in post-author wrapper */
+
+      postAuthorWrapper.insertAdjacentHTML('afterbegin', html);
+
     }
     /* END LOOP: for each articles */
 
