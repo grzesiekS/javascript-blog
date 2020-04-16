@@ -169,6 +169,27 @@
 
   generateTags();
 
+  const addActiveClassCurrentArticleLink = function() {
+    /* [DONE] get active article */
+
+    const activeArticle = document.querySelector(optArticleSelector + '.active');
+    console.log('Get active article:', activeArticle);
+
+    /* [DONE] get current article id */
+
+    const activeArticleID = activeArticle.getAttribute('id');
+    console.log('Active article ID: ' + activeArticleID);
+
+    /* [DONE] get title link where href equals active article id */
+
+    const titleLink = document.querySelector('a[href="#' + activeArticleID + '"]');
+    console.log('Title link for active article:', titleLink);
+
+    /* [DONE] add class active for title link for current article */
+
+    titleLink.classList.add('active');
+  };
+
   const tagClickHandler = function(event){
     /* [DONE] prevent default action for this event */
 
@@ -230,27 +251,6 @@
 
     addActiveClassCurrentArticleLink();
   };
-
-  function addActiveClassCurrentArticleLink() {
-    /* [DONE] get active article */
-
-    const activeArticle = document.querySelector(optArticleSelector + '.active');
-    console.log('Get active article:', activeArticle);
-
-    /* [DONE] get current article id */
-
-    const activeArticleID = activeArticle.getAttribute('id');
-    console.log('Active article ID: ' + activeArticleID);
-
-    /* [DONE] get title link where href equals active article id */
-
-    const titleLink = document.querySelector('a[href="#' + activeArticleID + '"]');
-    console.log('Title link for active article:', titleLink);
-
-    /* [DONE] add class active for title link for current article */
-
-    titleLink.classList.add('active');
-  }
 
   function addClickListenersToTags(){
     /* [DONE] find all links to tags */
