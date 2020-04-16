@@ -361,6 +361,14 @@
 
     generateTitleLinks('[data-author="' + author + '"]');
 
+    /* [DONE] execute function addClickListenersToTitles */
+
+    addClickListenersToTitles();
+
+    /* [DONE] execute function addActiveClassCurrentArticleLink */
+
+    addActiveClassCurrentArticleLink();
+
   };
 
   const authorClickHandler = function() {
