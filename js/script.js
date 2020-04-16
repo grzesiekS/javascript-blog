@@ -52,7 +52,8 @@
   const optArticleSelector = '.post',
     optTitleSelector = '.post-title',
     optTitleListSelector = '.titles',
-    optArticleTagsSelector = '.post-tags .list';
+    optArticleTagsSelector = '.post-tags .list',
+    optArticleAuthorSelector = '.post-author';
 
   function generateTitleLinks(customSelector = ''){
 
@@ -270,5 +271,25 @@
   }
 
   addClickListenersToTags();
+
+  const generateAuthors = function() {
+
+    /* [IN PROGRESS] Find all articles */
+
+    /* START LOOP: for each articles */
+
+      /* get author from the article */
+
+      /* find post-author wrapper of the article */
+
+      /* create const html for link with author name */
+
+      /* add created html code in post-author wrapper */
+
+    /* END LOOP: for each articles */
+
+  };
+
+  generateAuthors();
 
 }
