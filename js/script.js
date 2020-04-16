@@ -348,9 +348,13 @@
     console.log('All author links that are equale:', authorLinkHref);
 
     /* START LOOP: for each link equals "href" */
+    for(let linkHref of authorLinkHref) {
 
-      /* add class active */
+      /* [DONE] add class active */
 
+      linkHref.classList.add('active');
+
+    }
     /* END LOOP: for each link equals "href" */
 
     /* execute function "generateTitleLinks" with article selector as argument */
