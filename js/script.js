@@ -310,9 +310,13 @@
   generateAuthors();
 
   const addClickListenersToAuthors = function() {
-    /* [IN PROGRESS] prevent default action for this event */
+    /* [DONE] prevent default action for this event */
 
-    /* make new constant named "clickedElement" and give it the value of "this" */
+    event.preventDefault();
+
+    /* [DONE] make new constant named "clickedElement" and give it the value of "this" */
+
+    const clickedElement = this;
 
     /* make a new constant "href" and read the attribute "href" of the clicked element */
 
