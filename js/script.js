@@ -55,7 +55,8 @@
     optArticleTagsSelector = '.post-tags .list',
     optArticleAuthorSelector = '.post-author',
     optCloudClassCount = 5,
-    optCloudClassPrefix = 'tag-size-';
+    optCloudClassPrefix = 'tag-size-',
+    optAuthorsListSelector = '.list .authors';
 
   function generateTitleLinks(customSelector = ''){
 
@@ -351,6 +352,9 @@
   addClickListenersToTags();
 
   const generateAuthors = function() {
+    /* [NEW] create a new variable allTags with an empty object */
+
+    let allTags = {};
 
     /* [DONE] Find all articles */
 
@@ -366,6 +370,20 @@
       const author = article.getAttribute('data-author');
       console.log('Author of the article: ' + author);
 
+      /* [NEW] check if this author is NOT already in allTags */
+
+      if(!allTags[author]){
+
+        /* [NEW] add generated code to allTags object */
+
+        allTags[author] = 1;
+
+      } else {
+
+        allTags[author]++;
+
+      }
+
       /* [DONE] find post-author wrapper of the article */
 
       const postAuthorWrapper = article.querySelector(optArticleAuthorSelector);
@@ -380,8 +398,17 @@
 
       postAuthorWrapper.insertAdjacentHTML('afterbegin', html);
 
+      /* [IN PROGRESS] create const htmlAuthor with link code for section list authors in sidebar  */
+      const htmlAuthor = '<li><a href="#' + author.replace(' ', '-') + '"><span class="author-name">' + author +'( ' + allTags[author] + ')</span></a></li>';
+
+      /* get author section in sidebar */
+
+      /* add html code to author section in sidebar */
+
     }
     /* END LOOP: for each articles */
+
+    console.log('AllTags authors:', allTags);
 
   };
 
