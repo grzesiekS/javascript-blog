@@ -56,7 +56,7 @@
     optArticleAuthorSelector = '.post-author',
     optCloudClassCount = 5,
     optCloudClassPrefix = 'tag-size-',
-    optAuthorsListSelector = '.list .authors';
+    optAuthorsListSelector = '.list.authors';
 
   function generateTitleLinks(customSelector = ''){
 
@@ -352,9 +352,9 @@
   addClickListenersToTags();
 
   const generateAuthors = function() {
-    /* [NEW] create a new variable allTags with an empty object */
+    /* [NEW-DONE] create a new variable allAuthors with an empty object */
 
-    let allTags = {};
+    let allAuthors = {};
 
     /* [DONE] Find all articles */
 
@@ -370,17 +370,17 @@
       const author = article.getAttribute('data-author');
       console.log('Author of the article: ' + author);
 
-      /* [NEW] check if this author is NOT already in allTags */
+      /* [NEW-DONE] check if this author is NOT already in allTags */
 
-      if(!allTags[author]){
+      if(!allAuthors[author]){
 
-        /* [NEW] add generated code to allTags object */
+        /* [NEW-DONE] add generated code to allTags object */
 
-        allTags[author] = 1;
+        allAuthors[author] = 1;
 
       } else {
 
-        allTags[author]++;
+        allAuthors[author]++;
 
       }
 
@@ -397,18 +397,19 @@
       /* [DONE] add created html code into post-author wrapper */
 
       postAuthorWrapper.insertAdjacentHTML('afterbegin', html);
-
-      /* [IN PROGRESS] create const htmlAuthor with link code for section list authors in sidebar  */
-      const htmlAuthor = '<li><a href="#' + author.replace(' ', '-') + '"><span class="author-name">' + author +'( ' + allTags[author] + ')</span></a></li>';
-
-      /* get author section in sidebar */
-
-      /* add html code to author section in sidebar */
-
+      /* END LOOP: for each articles */
     }
-    /* END LOOP: for each articles */
 
-    console.log('AllTags authors:', allTags);
+    /* START LOOP: for each keys in allAuthors */
+      /* [NEW] create const htmlAuthor with link code for section list authors in sidebar  */
+
+      /* [NEW] get author section in sidebar */
+
+      /* [NEW] add html code to author section in sidebar */
+
+    /* END LOOP for each keys in allAuthors*/
+
+    console.log('AllTags authors:', allAuthors);
 
   };
 
