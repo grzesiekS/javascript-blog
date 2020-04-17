@@ -93,11 +93,11 @@ body {
   display: inline-block;
 }
 
-.list.tags li {
+.list.tags li, .list.authors li {
   display: inline-block;
 }
 
-.list.tags li p {
+.list.tags li p, .list.tags li .author-name, .list.authors li p, .list.authors li .author-name {
   margin: 0 5px;
 }
 

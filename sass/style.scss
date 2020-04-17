@@ -106,15 +106,17 @@ body {
   }
 }
 
-.list.tags {
+.list.tags, .list.authors {
 
   li {
     display: inline-block;
 
-    p {
+    p, .author-name {
       margin: 0 5px;
     }
   }
+
+
 }
 
 /* Authors */
