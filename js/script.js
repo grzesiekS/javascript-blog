@@ -400,11 +400,14 @@
       /* END LOOP: for each articles */
     }
 
+    const tagsParams = calculateTagsParams(allAuthors);
+    console.log('tagsParams Authors:', tagsParams);
+
     /* START LOOP: for each keys in allAuthors */
     for(let author in allAuthors) {
       console.log('All Authors object:', author);
       /* [NEW-DONE] create const htmlAuthor with link code for section list authors in sidebar  */
-      const htmlAuthor = '<li><a href="#' + author.replace(' ', '-') + '"><span class="author-name">' + author +' (' + allAuthors[author] + ')</span></a></li>';
+      const htmlAuthor = '<li><a href="#' + author.replace(' ', '-') + '" class="' + calculateTagClass(allAuthors[author], tagsParams) + '"><span class="author-name">' + author + '</span></a></li>';
       console.log('htmlAuthor section sidebar: ' + htmlAuthor);
 
       /* [NEW-DONE] get author section from sidebar */
