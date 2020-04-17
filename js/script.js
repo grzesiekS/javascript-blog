@@ -116,9 +116,9 @@
   addClickListenersToTitles();
 
   function generateTags(){
-    /* [NEW] create a new variable allTags with an empty array */
+    /* [NEW] create a new variable allTags with an empty object */
 
-    let allTags = [];
+    let allTags = {};
 
     /* [DONE] find all articles */
 
@@ -161,11 +161,16 @@
 
         /* [NEW] check if this link is NOT already in allTags */
 
-        if(allTags.indexOf(htmlCode) == -1){
+        if(!allTags[tag]){
 
-          /* [NEW] add generated code to allTags array */
+          /* [NEW] add generated code to allTags object */
 
-          allTags.push(htmlCode);
+          allTags[tag] = 1;
+
+        } else {
+
+          allTags[tag]++;
+
         }
         /* END LOOP: for each tag */
       }
@@ -183,9 +188,18 @@
 
     const tagList = document.querySelector('.tags');
 
-    /* [NEW] add html from allTags to tagList */
+    /* [NEW] create variable for all links HTML code */
+    let allTagsHTML = '';
 
-    tagList.innerHTML = allTags.join(' ');
+    /* [NEW] START LOOP: for each tag in allTags: */
+    for(let tag in allTags){
+      /* [NEW] generate code of a link and add it to allTagsHTML */
+      allTagsHTML += '<li><a href="#' + tag + '"><p>' + tag + ' (' + allTags[tag] + ')' + '</p></a></li>';
+    }
+    /* [NEW] END LOOP: for each tag in allTags: */
+
+    /*[NEW] add HTML from allTagsHTML to tagList */
+    tagList.innerHTML = allTagsHTML;
 
   }
 
