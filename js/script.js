@@ -411,7 +411,8 @@
       const authorSidebarSection = document.querySelector(optAuthorsListSelector);
       console.log('authorSidebarSection', authorSidebarSection);
 
-      /* [NEW] add html code to author section in sidebar */
+      /* [NEW-DONE] add html code to author section in sidebar */
+      authorSidebarSection.insertAdjacentHTML('afterbegin', htmlAuthor);
 
     /* END LOOP for each keys in allAuthors*/
     }
