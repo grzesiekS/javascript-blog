@@ -93,6 +93,14 @@ body {
   display: inline-block;
 }
 
+.list.tags li {
+  display: inline-block;
+}
+
+.list.tags li p {
+  margin: 0 5px;
+}
+
 /* Authors */
 .authors li {
   margin-bottom: 12px;
@@ -127,23 +135,23 @@ body {
 
 /* Tags size */
 .tag-size-1 {
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .tag-size-2 {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .tag-size-3 {
-  font-size: 24px;
+  font-size: 14px;
 }
 
 .tag-size-4 {
-  font-size: 32px;
+  font-size: 16px;
 }
 
 .tag-size-5 {
-  font-size: 40px;
+  font-size: 20px;
 }
 
 @media (max-width: 991px) {
