@@ -407,7 +407,9 @@
       const htmlAuthor = '<li><a href="#' + author.replace(' ', '-') + '"><span class="author-name">' + author +' (' + allAuthors[author] + ')</span></a></li>';
       console.log('htmlAuthor section sidebar: ' + htmlAuthor);
 
-      /* [NEW] get author section in sidebar */
+      /* [NEW-DONE] get author section from sidebar */
+      const authorSidebarSection = document.querySelector(optAuthorsListSelector);
+      console.log('authorSidebarSection', authorSidebarSection);
 
       /* [NEW] add html code to author section in sidebar */
 
