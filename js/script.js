@@ -116,9 +116,14 @@
   addClickListenersToTitles();
 
   const calculateTagsParams = function(tags) {
-    /* create variable tagsParam with keys max and min */
+    /* [DONE] create variable tagsParam with keys max and min */
+    let tagsParam = {
+      max: 0,
+      min: 0,
+    };
 
-    /* create variable tagsValueArrays */
+    /* [DONE] create variable tagsValueArrays */
+    let tagsValueArrays = [];
 
     /*START LOOP: for each key in tags*/
 
@@ -126,7 +131,9 @@
 
     /*END LOOP: for each key in tags */
 
-    /* return tagsParam with min and max value from tags*/
+    /* set min and max value in tagsParam */
+
+    /* return tagsParam */
   };
 
   function generateTags(){
