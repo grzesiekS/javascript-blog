@@ -134,9 +134,12 @@
     }
     console.log('tagsValueArray:', tagsValueArray);
 
-    /* set min and max value in tagsParam */
+    /* [DONE] set min and max value in tagsParam */
+    tagsParam.max = Math.max(...tagsValueArray);
+    tagsParam.min = Math.min(...tagsValueArray);
 
     /* return tagsParam */
+    return tagsParam;
   };
 
   function generateTags(){
