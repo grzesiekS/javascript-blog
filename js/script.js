@@ -401,13 +401,18 @@
     }
 
     /* START LOOP: for each keys in allAuthors */
-      /* [NEW] create const htmlAuthor with link code for section list authors in sidebar  */
+    for(let author in allAuthors) {
+      console.log('All Authors object:', author);
+      /* [NEW-DONE] create const htmlAuthor with link code for section list authors in sidebar  */
+      const htmlAuthor = '<li><a href="#' + author.replace(' ', '-') + '"><span class="author-name">' + author +' (' + allAuthors[author] + ')</span></a></li>';
+      console.log('htmlAuthor section sidebar: ' + htmlAuthor);
 
       /* [NEW] get author section in sidebar */
 
       /* [NEW] add html code to author section in sidebar */
 
     /* END LOOP for each keys in allAuthors*/
+    }
 
     console.log('AllTags authors:', allAuthors);
 
