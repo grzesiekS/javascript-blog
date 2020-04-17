@@ -122,14 +122,17 @@
       min: 0,
     };
 
-    /* [DONE] create variable tagsValueArrays */
-    let tagsValueArrays = [];
+    /* [DONE] create variable tagsValueArray */
+    let tagsValueArray = [];
 
     /*START LOOP: for each key in tags*/
-
-      /* add key value from tags to tagsValueArrays*/
+    for(let tag in tags) {
+      /* [DONE] add key value from tags to tagsValueArray*/
+      tagsValueArray.push(tags[tag]);
 
     /*END LOOP: for each key in tags */
+    }
+    console.log('tagsValueArray:', tagsValueArray);
 
     /* set min and max value in tagsParam */
 
