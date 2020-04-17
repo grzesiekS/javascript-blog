@@ -115,6 +115,20 @@
 
   addClickListenersToTitles();
 
+  const calculateTagsParams = function(tags) {
+    /* create variable tagsParam with keys max and min */
+
+    /* create variable tagsValueArrays */
+
+    /*START LOOP: for each key in tags*/
+
+      /* add key value from tags to tagsValueArrays*/
+
+    /*END LOOP: for each key in tags */
+
+    /* return tagsParam with min and max value from tags*/
+  };
+
   function generateTags(){
     /* [NEW] create a new variable allTags with an empty object */
 
@@ -187,6 +201,10 @@
     /* [NEW] find list of tags in right column */
 
     const tagList = document.querySelector('.tags');
+
+
+    const tagsParams = calculateTagsParams(allTags);
+    console.log('tagsParams:', tagsParams);
 
     /* [NEW] create variable for all links HTML code */
     let allTagsHTML = '';
