@@ -10,6 +10,7 @@
     tagLink: Handlebars.compile(document.querySelector('#template-tag-link').innerHTML),
     authorLink: Handlebars.compile(document.querySelector('#template-author-link').innerHTML),
     tagCloudLink: Handlebars.compile(document.querySelector('#template-tag-cloud-link').innerHTML),
+    authorCloudLink: Handlebars.compile(document.querySelector('#template-author-cloud-link').innerHTML),
   }
 
   const opts = {
@@ -427,24 +428,31 @@
     const tagsParams = calculateTagsParams(allAuthors);
     console.log('tagsParams Authors:', tagsParams);
 
+    const allAuthorsData = {authors: []};
+
     /* START LOOP: for each keys in allAuthors */
     for(let author in allAuthors) {
       console.log('All Authors object:', author);
       /* [NEW-DONE] create const htmlAuthor with link code for section list authors in sidebar  */
-      const htmlAuthor = '<li><a href="#' + author.replace(' ', '-') + '" class="' + calculateTagClass(allAuthors[author], tagsParams) + '"><span class="author-name">' + author + '</span></a></li>';
-      console.log('htmlAuthor section sidebar: ' + htmlAuthor);
 
-      /* [NEW-DONE] get author section from sidebar */
-      const authorSidebarSection = document.querySelector(opts.authorsListSelector);
-      console.log('authorSidebarSection', authorSidebarSection);
-
-      /* [NEW-DONE] add html code to author section in sidebar */
-      authorSidebarSection.insertAdjacentHTML('afterbegin', htmlAuthor);
+      allAuthorsData.authors.push({
+        authorHref: author.replace(' ', '-'),
+        author: author,
+        count: allAuthors[author],
+        className: calculateTagClass(allAuthors[author], tagsParams)
+      });
 
     /* END LOOP for each keys in allAuthors*/
     }
 
-    console.log('AllTags authors:', allAuthors);
+    /* [NEW-DONE] get author section from sidebar */
+    const authorSidebarSection = document.querySelector(opts.authorsListSelector);
+    console.log('authorSidebarSection', authorSidebarSection);
+
+    /* [NEW-DONE] add html code to author section in sidebar */
+    authorSidebarSection.insertAdjacentHTML('afterbegin', templates.authorCloudLink(allAuthorsData));
+
+    console.log('allAuthorsData:', allAuthorsData);
 
   };
 
