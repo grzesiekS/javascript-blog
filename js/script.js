@@ -5,6 +5,10 @@
     console.log('links: ', links);
   });*/
 
+  const templates = {
+    articleLink: Handlebars.compile(document.querySelector('#template-article-link').innerHTML)
+  }
+
   const opts = {
     articleSelector: '.post',
     titleSelector: '.post-title',
