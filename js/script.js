@@ -403,7 +403,9 @@
 
       /* [DONE] create const html for link with author name */
 
-      const html = '<a href="#author' + author.replace(' ', '-') + '">by ' + author + '</a>';
+      //const html = '<a href="#author' + author.replace(' ', '-') + '">by ' + author + '</a>';
+      const linkHTMLData = {id: author.replace(' ', '-'), author: author};
+      const html = templates.authorLink(linkHTMLData);
       console.log('HTML code for author link: ' + html);
 
       /* [DONE] add created html code into post-author wrapper */
