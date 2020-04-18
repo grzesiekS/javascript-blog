@@ -203,8 +203,8 @@
         /* [DONE] generate HTML of the link */
 
         //const htmlCode = '<li><a href="#tag-' + tag + '"><p>' + tag + '</p></a></li>';
-        const linkHTMLData = {id: 'tag-' + tag, title: tag};
-        const htmlCode = templates.articleLink(linkHTMLData);
+        const linkHTMLData = {id: tag, tag: tag};
+        const htmlCode = templates.tagLink(linkHTMLData);
         console.log('HTML Code for list: ' + htmlCode);
 
         /* [DONE] add generated code to html variable */
