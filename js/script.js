@@ -338,6 +338,18 @@
     }
   };
 
+  const removeActiveClassTag = function() {
+    /* get all tags link with class active */
+
+    /* IF STATMENT: If tagLinks array is not null */
+
+      /* START LOOP: for all active tag links */
+
+        /* Remove class active from all links */
+
+      /* END LOOP: for all active tag links */
+  };
+
   const tagClickHandler = function(event){
     /* [DONE] prevent default action for this event */
 
