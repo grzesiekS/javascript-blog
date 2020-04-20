@@ -339,15 +339,24 @@
   };
 
   const removeActiveClassTag = function() {
-    /* get all tags link with class active */
+    /* [DONE] get all tags link with class active */
+
+    const activeTagLinks = document.querySelectorAll('a[href^="#tag-"].active');
+    console.log('activeTagLinks', activeTagLinks);
 
     /* IF STATMENT: If tagLinks array is not null */
+    if(activeTagLinks != null) {
 
       /* START LOOP: for all active tag links */
+      for(let link of activeTagLinks) {
 
-        /* Remove class active from all links */
+        /* [IN PROGRESS] Remove class active from all links */
+
+        link.classList.remove('active');
 
       /* END LOOP: for all active tag links */
+      }
+    }
   };
 
   const tagClickHandler = function(event){
