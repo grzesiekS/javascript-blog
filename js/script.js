@@ -294,6 +294,33 @@
     titleLink.classList.add('active');
   };
 
+  const setActiveClassFirstArticleLink = function(articleSelector) {
+    /* [DONE] get active article */
+      const activeArticle = document.querySelector(opts.articleSelector + '.active');
+      console.log('activeArticle', activeArticle);
+
+    /* IF STATMENT: if active article is not null */
+    if(activeArticle != null) {
+      /* [DONE] remove active class from article */
+        activeArticle.classList.remove('active');
+    }
+
+    /* [DONE] find first article data-tag of clicked link*/
+    const firstArticle = document.querySelector(articleSelector)
+
+    /* [DONE] add active class to first article */
+    firstArticle.classList.add('active');
+
+    /* */
+
+    /* [DONE] find link for the first article */
+    const linkFirstArticle = document.querySelector('a[href="#' + firstArticle.getAttribute('id') + '"]')
+
+    /* [DONE] add active class to link for the first article */
+    linkFirstArticle.classList.add('active');
+
+  }
+
   const tagClickHandler = function(event){
     /* [DONE] prevent default action for this event */
 
@@ -353,7 +380,9 @@
 
     /* [DONE] execute function addActiveClassCurrentArticleLink */
 
-    addActiveClassCurrentArticleLink();
+    //addActiveClassCurrentArticleLink();
+    setActiveClassFirstArticleLink('[data-tags~="' + tag + '"]');
+
   };
 
   function addClickListenersToTags(){
