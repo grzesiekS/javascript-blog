@@ -375,6 +375,15 @@
 
   addClickListenersToTags();
 
+  function addClickListenersToTagsCloud() {
+    /* [IN PROGRESS] find all links to tags in cloud */
+
+    /*START LOOP: for all links in tag cloud section */
+      /* add handler for link event listener */
+
+    /*END LOOP: for all links in tag cloud section */
+  }
+
   const generateAuthors = function() {
     /* [NEW-DONE] create a new variable allAuthors with an empty object */
 
