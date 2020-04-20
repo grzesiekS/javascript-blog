@@ -294,6 +294,15 @@
     titleLink.classList.add('active');
   };
 
+  const compare = function(arrayObj, comparingVar) {
+    for(let arrObj of arrayObj) {
+      if(arrObj == comparingVar) {
+        return true;
+      }
+    }
+    return false
+  }
+
   const setActiveClassFirstArticleLink = function(articleSelector) {
     /* [DONE] get active article */
       const activeArticle = document.querySelector(opts.articleSelector + '.active');
@@ -301,21 +310,53 @@
 
     /* IF STATMENT: if active article is not null */
     if(activeArticle != null) {
-      /* [DONE] remove active class from article */
+
+      /* [DONE] find all articles where data-tag contains href atribute of clicked link */
+      const allArticles = document.querySelectorAll(articleSelector);
+      console.log('All articles:', allArticles);
+
+      /* IF STATMENT: Check if allArticles array contain activeArticle*/
+      if (!compare(allArticles, activeArticle)) {
+        /* If it doesn't contain */
+        /* [DONE] remove active class from article */
         activeArticle.classList.remove('active');
+
+        /* [DONE] find first article where data-tag contains href atribute of clicked link*/
+        const firstArticle = document.querySelector(articleSelector)
+
+        /* [DONE] add active class to first article */
+        firstArticle.classList.add('active');
+
+        /* [DONE] find link in sidebar for the first article */
+        const linkFirstArticle = document.querySelector('a[href="#' + firstArticle.getAttribute('id') + '"]')
+
+        /* [DONE] add active class to link for the first article */
+        linkFirstArticle.classList.add('active');
+      } else {
+        /* [DONE] get active article link in side bar */
+
+        const activeArticleLink = document.querySelector('a[href="#' + activeArticle.getAttribute('id') + '"]');
+
+        /* [IN PROGRESS] add active class to active article link */
+
+        activeArticleLink.classList.add('active');
+
+      }
+    } else {
+
+      /* [DONE] find first article where data-tag contains href atribute of clicked link*/
+      const firstArticle = document.querySelector(articleSelector)
+
+      /* [DONE] add active class to first article */
+      firstArticle.classList.add('active');
+
+      /* [DONE] find link in sidebar for the first article */
+      const linkFirstArticle = document.querySelector('a[href="#' + firstArticle.getAttribute('id') + '"]')
+
+      /* [DONE] add active class to link for the first article */
+      linkFirstArticle.classList.add('active');
+
     }
-
-    /* [DONE] find first article where data-tag contains href atribute of clicked link*/
-    const firstArticle = document.querySelector(articleSelector)
-
-    /* [DONE] add active class to first article */
-    firstArticle.classList.add('active');
-
-    /* [DONE] find link in sidebar for the first article */
-    const linkFirstArticle = document.querySelector('a[href="#' + firstArticle.getAttribute('id') + '"]')
-
-    /* [DONE] add active class to link for the first article */
-    linkFirstArticle.classList.add('active');
 
   }
 
