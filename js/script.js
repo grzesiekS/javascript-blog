@@ -319,6 +319,15 @@
 
   }
 
+  const removeActiveCLassAuthors = function() {
+    /* get all authors link with class active*/
+
+    /* IF STATMENT: If authorLinks array is not null */
+      /* START LOOP: for all links with class active */
+        /* Remove class active from all links */
+      /* END LOOP: for all links with class active */
+  };
+
   const tagClickHandler = function(event){
     /* [DONE] prevent default action for this event */
 
