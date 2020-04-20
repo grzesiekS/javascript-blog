@@ -22,6 +22,7 @@
     cloudClassCount: 5,
     cloudClassPrefix: 'tag-size-',
     authorsListSelector: '.list.authors',
+    tagListSelector: '.list.tags',
   };
 
   const titleClickHandler = function() {
