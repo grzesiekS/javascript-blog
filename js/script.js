@@ -595,6 +595,10 @@
     //addActiveClassCurrentArticleLink();
     setActiveClassFirstArticleLink('[data-author="' + author + '"]');
 
+    /* [DONE] execute function removeActiveClassTag to remove active class from tags */
+
+    removeActiveClassTag();
+
   };
 
   const authorClickHandler = function() {
