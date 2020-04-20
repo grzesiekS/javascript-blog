@@ -320,12 +320,22 @@
   }
 
   const removeActiveCLassAuthors = function() {
-    /* get all authors link with class active*/
+    /* [DONE] get all authors link with class active*/
+    activeAuthorLinks = document.querySelectorAll('a[href^="#author"].active');
+    console.log('activeAuthorLinks', activeAuthorLinks);
 
     /* IF STATMENT: If authorLinks array is not null */
-      /* START LOOP: for all links with class active */
-        /* Remove class active from all links */
-      /* END LOOP: for all links with class active */
+    if (activeAuthorLinks != null) {
+
+      /* START LOOP: for all active author links */
+      for(let link of activeAuthorLinks) {
+
+        /* [DONE] Remove class active from all links */
+        link.classList.remove('active');
+
+      /* END LOOP: for all active author links */
+      }
+    }
   };
 
   const tagClickHandler = function(event){
@@ -390,6 +400,8 @@
     //addActiveClassCurrentArticleLink();
     setActiveClassFirstArticleLink('[data-tags~="' + tag + '"]');
 
+    /* execute function removeActiveCLassAuthors to remove active class from authors links */
+    removeActiveCLassAuthors();
   };
 
   function addClickListenersToTags(){
