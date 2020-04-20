@@ -376,13 +376,19 @@
   addClickListenersToTags();
 
   function addClickListenersToTagsCloud() {
-    /* [IN PROGRESS] find all links to tags in cloud */
+    /* [DONE] find all links to tags in cloud */
+    const tagsCloudLinks = document.querySelectorAll(opts.tagListSelector + ' a');
 
     /*START LOOP: for all links in tag cloud section */
-      /* add handler for link event listener */
+    for(let link of tagsCloudLinks) {
+      /* [DONE] add handler for link event listener */
+      link.addEventListener('click', tagClickHandler);
 
     /*END LOOP: for all links in tag cloud section */
+    }
   }
+
+  addClickListenersToTagsCloud();
 
   const generateAuthors = function() {
     /* [NEW-DONE] create a new variable allAuthors with an empty object */
