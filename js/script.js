@@ -581,4 +581,22 @@
 
   authorClickHandler();
 
+  const authorCloudClickHandler = function() {
+    /* [DONE] find all links to authors */
+
+    const authorLinks = document.querySelectorAll(opts.authorsListSelector + ' a');
+    console.log('Author link:', authorLinks);
+
+    /* START LOOP: for each link */
+    for(let link of authorLinks) {
+
+      /* [DONE] add tagClickHandler as event listener for that link */
+      link.addEventListener('click', addClickListenersToAuthors);
+
+    }
+    /* END LOOP: for each link */
+  };
+
+  authorCloudClickHandler();
+
 }
