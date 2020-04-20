@@ -557,9 +557,10 @@
 
     addClickListenersToTitles();
 
-    /* [DONE] execute function addActiveClassCurrentArticleLink */
+    /* [DONE] execute function addActiveClassCurrentArticleLink/setActiveClassFirstArticleLink */
 
-    addActiveClassCurrentArticleLink();
+    //addActiveClassCurrentArticleLink();
+    setActiveClassFirstArticleLink('[data-author="' + author + '"]');
 
   };
 
