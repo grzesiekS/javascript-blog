@@ -282,6 +282,20 @@
     return false
   }
 
+  const activeClassHandlerFirstArticle = function(articleSelector) {
+    /* [DONE] find first article where data-tag contains href atribute of clicked link*/
+    const firstArticle = document.querySelector(articleSelector)
+
+    /* [DONE] add active class to first article */
+    firstArticle.classList.add('active');
+
+    /* [DONE] find link in sidebar for the first article */
+    const linkFirstArticle = document.querySelector('a[href="#' + firstArticle.getAttribute('id') + '"]')
+
+    /* [DONE] add active class to link for the first article */
+    linkFirstArticle.classList.add('active');
+  };
+
   const activeClassHandler = function(articleSelector) {
     /* [DONE] get active article */
       const activeArticle = document.querySelector(opts.articleSelector + '.active');
@@ -300,17 +314,8 @@
         /* [DONE] remove active class from article */
         activeArticle.classList.remove('active');
 
-        /* [DONE] find first article where data-tag contains href atribute of clicked link*/
-        const firstArticle = document.querySelector(articleSelector)
+        activeClassHandlerFirstArticle(articleSelector);
 
-        /* [DONE] add active class to first article */
-        firstArticle.classList.add('active');
-
-        /* [DONE] find link in sidebar for the first article */
-        const linkFirstArticle = document.querySelector('a[href="#' + firstArticle.getAttribute('id') + '"]')
-
-        /* [DONE] add active class to link for the first article */
-        linkFirstArticle.classList.add('active');
       } else {
         /* [DONE] get active article link in side bar */
 
@@ -323,17 +328,7 @@
       }
     } else {
 
-      /* [DONE] find first article where data-tag contains href atribute of clicked link*/
-      const firstArticle = document.querySelector(articleSelector)
-
-      /* [DONE] add active class to first article */
-      firstArticle.classList.add('active');
-
-      /* [DONE] find link in sidebar for the first article */
-      const linkFirstArticle = document.querySelector('a[href="#' + firstArticle.getAttribute('id') + '"]')
-
-      /* [DONE] add active class to link for the first article */
-      linkFirstArticle.classList.add('active');
+      activeClassHandlerFirstArticle(articleSelector);
 
     }
 
