@@ -303,7 +303,7 @@
     return false
   }
 
-  const setActiveClassFirstArticleLink = function(articleSelector) {
+  const activeClassHandler = function(articleSelector) {
     /* [DONE] get active article */
       const activeArticle = document.querySelector(opts.articleSelector + '.active');
       console.log('activeArticle', activeArticle);
@@ -457,10 +457,10 @@
 
     addClickListenersToTitles();
 
-    /* [DONE] execute function addActiveClassCurrentArticleLink */
+    /* [DONE] execute function activeClassHandler */
 
     //addActiveClassCurrentArticleLink();
-    setActiveClassFirstArticleLink('[data-tags~="' + tag + '"]');
+    activeClassHandler('[data-tags~="' + tag + '"]');
 
     /* execute function removeActiveCLassAuthors to remove active class from authors links */
     removeActiveCLassAuthors();
@@ -640,10 +640,10 @@
 
     addClickListenersToTitles();
 
-    /* [DONE] execute function addActiveClassCurrentArticleLink/setActiveClassFirstArticleLink */
+    /* [DONE] execute function addActiveClassCurrentArticleLink/activeClassHandler */
 
     //addActiveClassCurrentArticleLink();
-    setActiveClassFirstArticleLink('[data-author="' + author + '"]');
+    activeClassHandler('[data-author="' + author + '"]');
 
     /* [DONE] execute function removeActiveClassTag to remove active class from tags */
 
